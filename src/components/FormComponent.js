@@ -13,7 +13,7 @@
  } from "@mui/material";
  import { AccountCircle } from "@mui/icons-material";
  import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
- const FormComponent = ({ info, setInfo, handleSubmit }) => {
+ const FormComponent = ({ info, setInfo, handleSubmit, isAdd }) => {
    const handleChange = (e) => {
      e.preventDefault();
      // const name = e.target.name;
@@ -28,13 +28,13 @@
          <div>
            {" "}
            <a
-             href= "https://www.linkedin.com/in/cemalettin-dimlioglu/"
+             href="https://www.linkedin.com/in/cemalettin-dimlioglu/"
              className="design"
              target="_blank"
              rel="noopener noreferrer"
            >
              {" "}
-             Cemalettin Dimlioglu{" "}
+             James Dimly{" "}
            </a>{" "}
          </div>
          <span className="design header">design</span>
@@ -87,7 +87,7 @@
                </Select>
              </FormControl>
              <Button variant="contained" type="submit" value="Submit">
-               Add
+               {isAdd}
              </Button>
            </Stack>
          </form>
